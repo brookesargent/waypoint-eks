@@ -3,7 +3,7 @@ require 'json'
 def handler(event:, context:)
     qs = event.fetch("queryStringParameters", {})
 
-    name = qs.fetch("name", "unknown user")
+    name = qs.fetch("name", "human")
 
     STDERR.puts "Handling ALB request for #{name}"
 
